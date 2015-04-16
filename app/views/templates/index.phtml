@@ -1,10 +1,18 @@
 {# templates/index.phtml #}
 <header>
     <div>
-        <img id="flecha" src="img/home.png"/>
-        <span class="indicacionHF">REGRESAR</span>
-        <img id="home" src=""/>
-        <span class="indicacionHF">INICIO</span>
+
+        <a class="puntero"><div class="inlineBlock puntero">
+                <img id="flecha" style="width: 64px;height: 64px;"src="img/flechaIzq.png"/>
+                <span class="indicacionHF">REGRESAR</span>
+            </div></a>
+        <a href="index.phtml" class="puntero"><div class="inlineBlock">
+                <img id="home" src="img/home.png" />
+                <span class="indicacionHF"> INICIO</span>
+            </div></a>
+
+
+
     </div>
     <div>
         <span></span>
@@ -12,12 +20,15 @@
     <div id=""></div>
 </header>
 <div>
-{% block cuerpo %}
+    {% block cuerpo %}
 
-{% endblock %}
+    {% endblock %}
 </div>
-<footer >
-    <span>VERIFICADOR DE PRECIOS</span>
-    <span>PASE SU PRODUCTO</span>
+<footer>
+    <div style="position: absolute;left:0px;right: 0px; top:0px; bottom:0px; margin: auto;width: 300px;">
+        <span class="XD">VERIFICADOR DE PRECIOS</span>
+        <span>PASE SU PRODUCTO</span>
+    </div>
+
 </footer>
 
