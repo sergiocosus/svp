@@ -50,6 +50,7 @@ table {
 
 body{
     position:relative;
+    background-color: #00cccc;
 }
 
 header, footer{
@@ -98,7 +99,7 @@ footer span{
   transition-duration: 4s;
   transition-delay: 4s;
   opacity: 1;
-  opacity: 1;
+  
     
 }
 .lol{
