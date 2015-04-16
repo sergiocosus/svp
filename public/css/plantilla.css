@@ -51,13 +51,38 @@ table {
 body{
     position:relative;
     background-color: #00cccc;
+    background-image: url("img/congruent_pentagon.png");
+    width: 100%;
+    overflow: hidden;
 }
 
 header, footer{
-
+    padding-left: 5px;
     width: 100%;
-    background-color: blue;
+    background-color: darkslategray;
 }
+
+header a{
+        transition:.3s all ;
+    -webkit-transition: all .3s;
+}
+
+header a:hover{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+header img{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+header a{
+    display: inline-block;
+    height: 100%;
+    margin-right: 20px;
+}
+
 header{
     height: 70px;
 }
@@ -69,9 +94,13 @@ footer{
     text-align: center;
 }
 
-header, footer span{
+header span, footer span{
+    display:inline-block;
     font-size: 30px; 
+    line-height: 70px;
     font-family: fantasy;
+    color:lightgray;    
+    vertical-align: top;
 }
 
 .inlineBlock{
@@ -89,7 +118,16 @@ footer span{
     line-height: 50px;
 }
 
-foot
+footer a:hover{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+footer img{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+
 
 
 .lol{
@@ -108,6 +146,9 @@ foot
     100%  {opacity: 0;}
 }
 
+footer span{
+    font-size: 40px;
+}
 /* The element to apply the animation to */
 #mensaje1 {
     -webkit-animation: animacion1 5s;
@@ -125,4 +166,10 @@ foot
     opacity:1;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+}
+
+
+#paginaActual{
+    float:right;
+    margin-right: 20px;
 }

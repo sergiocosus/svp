@@ -1,18 +1,15 @@
 {# templates/index.phtml #}
 <header>
     <div>
-
-        <a class="puntero"><div class="inlineBlock puntero">
-                <img id="flecha" style="width: 64px;height: 64px;"src="img/flechaIzq.png"/>
-                <span class="indicacionHF">REGRESAR</span>
-            </div></a>
-        <a href="index.phtml" class="puntero"><div class="inlineBlock">
-                <img id="home" src="img/home.png" />
-                <span class="indicacionHF"> INICIO</span>
-            </div></a>
-
-
-
+        <a class="puntero" href="javascript:history.back()">
+            <img id="flecha" style="width: 64px;height: 64px;"src="img/flechaIzq.png"/>
+            <span class="indicacionHF">REGRESAR</span>
+        </a>
+        <a href="" class="puntero">
+            <img id="home" src="img/home.png" />
+            <span class="indicacionHF"> INICIO</span>
+        </a>
+        <span id="paginaActual"> Menú Principal</span>
     </div>
     <div>
         <span></span>
