@@ -64,8 +64,8 @@ header{
 footer{
     position: fixed;
     bottom:0px;
-
     height: 50px;
+    text-align: center;
 }
 
 header, footer span{
@@ -85,22 +85,43 @@ a{
 }
 
 footer span{
-    position: absolute;
-    opacity: 0;
+    line-height: 50px;
 }
-.XD{
-    
-    
-  -webkit-transition-property: opacity;
-  -webkit-transition-duration: 4s;
-  -webkit-transition-delay: 4s;
-  transition-property: opacity;
-  transition-duration: 4s;
-  transition-delay: 4s;
-  opacity: 1;
-  opacity: 1;
-    
-}
+
+foot
+
+
 .lol{
 
+}
+
+/* The animation code */
+@keyframes animacion1 {
+    0%   {opacity: 0;}
+    50%  {opacity: 1;}
+    100%  {opacity: 0;}
+}
+@-webkit-keyframes animacion1 {
+    0%   {opacity: 0;}
+    50%  {opacity: 1;}
+    100%  {opacity: 0;}
+}
+
+/* The element to apply the animation to */
+#mensaje1 {
+    -webkit-animation: animacion1 5s;
+    opacity:0;
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+#mensaje2 {
+    position:relative;
+    top:-50px;
+      -webkit-animation: animacion1 5s;
+    opacity:1;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
