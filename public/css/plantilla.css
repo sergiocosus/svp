@@ -89,7 +89,7 @@ footer span{
     line-height: 50px;
 }
 
-foot
+
 
 
 .lol{
@@ -125,4 +125,30 @@ foot
     opacity:1;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+}
+
+.displayNone{
+    display: none;
+}
+#promocioneslol{
+    position: fixed;
+    bottom: 50px;
+    width: 800px;
+    left: 0px;
+    right:0px;
+    margin: auto;
+    height: 40px;
+    background-color: yellow;
+    font-size: 20px;
+    font-family: fantasy;
+}
+#promocioneslol div{
+    margin-left: 30px;
+    margin-right: 30px;
+    display: inline-block;
+}
+#promocioneslol div img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
