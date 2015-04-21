@@ -9,7 +9,7 @@
             <img id="home" src="img/home.png" />
             <span class="indicacionHF"> INICIO</span>
         </a>
-        <span id="paginaActual"> Menú Principal</span>
+        <span id="paginaActual">{% block titulo %} Menú Principal {% endblock %}</span>
     </div>
     <div>
         <span></span>
@@ -26,4 +26,16 @@
     <br/>
     <span id="mensaje2">PASE SU PRODUCTO</span>
 </footer>
+
+<script>
+    var codigo="";
+    $(window).on('keypress',function(e){
+        if(e.keyCode==13){
+            location.href='verificador?codigo='+codigo;
+        }else{
+             codigo += String.fromCharCode(e.keyCode);
+        }
+        console.log(e.keyCode);
+    });
+</script>
 
