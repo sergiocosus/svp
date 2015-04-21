@@ -7,7 +7,7 @@
 
 var Verficador=function(){
     this.$descripcion=$("#descripcionV");
-    $descripcion.click(function(){
+    this.$descripcion.click(function(){
         $("#descripcionMostrar").removeClass("displayNone");
     });
 };
