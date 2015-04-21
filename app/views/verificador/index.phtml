@@ -1,50 +1,89 @@
 {% extends "templates/index.phtml" %}
-{% block cuerpo %}
 
-<div style="  overflow: scroll;overflow-x: hidden;">
-    <div style="width: 40%; margin-top: 50px;margin-left: 50px;margin-right: 50px;" class="inlineBlock" >
-        <img src="img/laptop.png" style="width:300px;height:300px;"/>
+{% block titulo %} Verificador de precios {% endblock %}
+
+{% block cuerpo %}
+<div style="text-align: center;margin-bottom: 70px; ">
+
+
+    <div style="
+         display: inline-block;  overflow: hidden; 
+         width: 700px;
+         margin-top: 20px;
+         border-radius: 30px;
+         background-color: rgba(0,50,0,.2);
+         padding: 10px;">
+        <div style="" class="inlineBlock">
+            <img src="img/laptop.png" style="width:300px;height:300px;float: right;">
+        </div>
+        <div style=" 
+             font-family: fantasy;
+             padding: 40px;
+             vertical-align: top;" class="inlineBlock">
+            <ul style="list-style: none; width: 300px;">
+                <li><span id="codigo">{{codigo}}</span></li>
+                <li><span id="nombreP" style="font-size: 30px;">Laptop Dell Pavillion SD150P</span></li>
+                <br/>
+                <li><a href="verificador#descripcionMostrar"id="descripcionV" 
+                       style="">
+                        Ver Descripcion
+                    </a></li>
+                
+                <li style="
+                    padding: 10px;
+                    margin-top: 20px;
+                    width: 100%;
+                    vertical-align: middle;
+                    background-color: rgba(57, 100, 60,.5);
+                    border-radius: 30px">
+                    <span style="font-size: 20px;">Precio:</span>
+                    <br/>
+                    <span id="precioP" style="
+                          font-size: 60px;color:greenyellow;
+                          text-shadow: 2px 2px 5px black;
+                          
+                          " >   
+                        $100.00
+                    </span></li>
+            </ul>
+        </div>
+
     </div>
-    <div style="width: 40%;height: 350px; margin-top: 50px;margin-left: 50px;margin-right: 50px; padding: 0px; vertical-align: top;" class="inlineBlock" >
-        <ul style="list-style: none; width: 300px;font-size: 20px;">
-            <li><span id="nombreP">Laptop Dell Pavillion SD150P</span></li>
-            <li><div id="descripcionV"style="width: 200px; vertical-align: middle;
-                     background-color: #7c7c7c; font-size: 30px; cursor: pointer">
-                    Ver Descripcion
-                </div></li>
-            <li><span>Precio:</span></li>
-            <li><div id="precioP"style="width: 200px;height: 70px; vertical-align: middle;
-                     background-color: #7c7c7c; font-size: 60px;">
-                    $100.00
-                </div></li>
-        </ul>
-    </div>
-    <div id="descripcionMostrar"style="margin-left:60px;margin-right:60px; text-align : justify; margin-bottom: 150px" class="displayNone">
+
+
+
+
+    <div id="descripcionMostrar" style="margin-left:60px;
+         color:white;
+         font-size: 20px;
+         margin-right:60px; 
+         text-align : justify; 
+         margin-bottom: 150px; 
+         background-color: rgba(57, 100, 60,.5);
+         border-radius: 10px;
+         padding: 15px;
+         " class="">
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
 
             In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
 
             Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+    </div><div id="promocioneslol">
+        <span>Productos Similares:</span>
+        <div><img src="img/laptop.png"></div>
+        <div><img src="img/laptop.png"></div>
+        <div><img src="img/laptop.png"></div>
+        <div><img src="img/laptop.png"></div>
+        <div><img src="img/laptop.png"></div>
+        <div><img src="img/laptop.png"></div>
     </div>
+
+
+    <script>
+        var verficador = new Verficador();
+    </script>
+
+
+
 </div>
-
-
-
-
-<div id="promocioneslol">
-    <span>Productos Similares:</span>
-    <div><img src="img/laptop.png"/></div>
-    <div><img src="img/laptop.png"/></div>
-    <div><img src="img/laptop.png"/></div>
-    <div><img src="img/laptop.png"/></div>
-    <div><img src="img/laptop.png"/></div>
-    <div><img src="img/laptop.png"/></div>
-</div>
-
-
-<script>
-var verficador=new Verficador();
-</script>
-
-
 {% endblock %}
