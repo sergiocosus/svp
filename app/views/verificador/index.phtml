@@ -1,4 +1,7 @@
 {% extends "templates/index.phtml" %}
+
+{% block titulo %} Verificador de precios {% endblock %}
+
 {% block cuerpo %}
 
 <div style="">
@@ -7,6 +10,7 @@
     </div>
     <div style="width: 40%;height: 350px; margin:50px; padding: 0px; vertical-align: top;" class="inlineBlock" >
         <ul style="list-style: none; width: 300px;font-size: 20px;">
+            <li><span id="codigo">{{ codigo }}</span></li>
             <li><span id="nombreP">Laptop Dell Pavillion SD150P</span></li>
             <li><div id="descripcionV"style="width: 200px; vertical-align: middle;
                      background-color: #7c7c7c; font-size: 30px; cursor: pointer">
@@ -18,10 +22,6 @@
                     $100.00
                 </div></li>
         </ul>
-
-
-
-
     </div>
 </div>
 
