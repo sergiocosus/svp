@@ -7,12 +7,12 @@ CREATE SCHEMA IF NOT EXISTS `svp` DEFAULT CHARACTER SET utf8 COLLATE utf8_genera
 USE `svp` ;
 
 -- -----------------------------------------------------
--- Table `svp`.`departamet`
+-- Table `svp`.`departaments`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `svp`.`departamet` ;
+DROP TABLE IF EXISTS `svp`.`departaments` ;
 
-CREATE TABLE IF NOT EXISTS `svp`.`departamet` (
-  `id` INT UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `svp`.`departaments` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
@@ -20,12 +20,12 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `svp`.`coupon`
+-- Table `svp`.`coupons`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `svp`.`coupon` ;
+DROP TABLE IF EXISTS `svp`.`coupons` ;
 
-CREATE TABLE IF NOT EXISTS `svp`.`coupon` (
-  `id` INT UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `svp`.`coupons` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `description` INT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `svp`.`products` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `departamet_id` INT UNSIGNED NOT NULL,
   `coupon_id` INT UNSIGNED NULL,
+  `bar_code` VARCHAR(100) NULL,
   `name` VARCHAR(80) NOT NULL,
   `mark` VARCHAR(80) NULL,
   `description` TEXT NULL,
@@ -49,14 +50,15 @@ CREATE TABLE IF NOT EXISTS `svp`.`products` (
   UNIQUE INDEX `name_UNIQUE` (`name` ASC),
   INDEX `fk_products_departament_idx` (`departamet_id` ASC),
   INDEX `fk_products_coupons_idx` (`coupon_id` ASC),
+  UNIQUE INDEX `bar_code_UNIQUE` (`bar_code` ASC),
   CONSTRAINT `fk_products_departament`
     FOREIGN KEY (`departamet_id`)
-    REFERENCES `svp`.`departamet` (`id`)
+    REFERENCES `svp`.`departaments` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_products_coupons`
     FOREIGN KEY (`coupon_id`)
-    REFERENCES `svp`.`coupon` (`id`)
+    REFERENCES `svp`.`coupons` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -68,7 +70,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `svp`.`ads` ;
 
 CREATE TABLE IF NOT EXISTS `svp`.`ads` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(45) NULL,
   `description` VARCHAR(45) NULL,
   `product_id` INT UNSIGNED NULL,
