@@ -196,6 +196,7 @@ footer span{
     width: 40px;
     height: 40px;
     cursor: pointer;
+    
 }
 
 nav{
@@ -298,3 +299,31 @@ a:hover{text-decoration: none;}
 #descripcionV:hover{
     background-color: rgba(0, 100, 0,1);
 }
+
+.boton1{
+    font-family: fantasy;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0, 50, 0,.4);
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px black;
+    position: fixed;
+    text-align: center;
+    margin: 10px;
+}
+
+.boton1:hover{
+    background-color: rgba(0, 100, 0,1);
+}
+
+.botonSubir{
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+
+}
+
+
+
