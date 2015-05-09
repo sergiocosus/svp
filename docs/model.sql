@@ -12,7 +12,7 @@ USE `svp` ;
 DROP TABLE IF EXISTS `svp`.`departamet` ;
 
 CREATE TABLE IF NOT EXISTS `svp`.`departamet` (
-  `id` INT NOT NULL,
+  `id` INT UNSIGNED NOT NULL,
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
