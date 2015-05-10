@@ -5,7 +5,7 @@ class VerificadorController extends \Phalcon\Mvc\Controller
 
     public function indexAction()
     {
-      // $this->view->disable();
+    // $this->view->disable();
         //$products=Product::find();
        /*
         $producto= new Product();
@@ -17,11 +17,17 @@ class VerificadorController extends \Phalcon\Mvc\Controller
         var_dump($producto->save());
         var_dump($producto->getMessages());
         * */
-        $products=Product::findFirstByBarCode($_P['codigo']);
-
+        $product=Product::findFirstByBarCode($_POST['code']);
+        //var_dump($product->toArray());
         //echo json_encode($products->toArray());
-        $this->view->setVar("codigo", $product->bar_code);
-        $this->view->setVar("codigo", $_POST['code']);
+        if(!$product){
+            $product=new Product();
+            $product->name="El producto no existe";
+            $product->price="JAJAJAJAJAJ XD LOL";
+        }
+        $this->view->setVar("producto", $product);
+       
+;
     }
     
     public function testAction(){
