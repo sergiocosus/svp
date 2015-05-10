@@ -21,6 +21,7 @@ class VerificadorController extends \Phalcon\Mvc\Controller
 
         //echo json_encode($products->toArray());
         $this->view->setVar("codigo", $product->bar_code);
+        $this->view->setVar("codigo", $_POST['code']);
     }
     
     public function testAction(){

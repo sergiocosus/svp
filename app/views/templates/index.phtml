@@ -27,11 +27,16 @@
     <span id="mensaje2">PASE SU PRODUCTO</span>
 </footer>
 
+<form id="toVerifier" method="post"  action="verificador">
+    <input id="barCode" name="code"/>
+</form>
 <script>
     var codigo="";
     $(window).on('keypress',function(e){
         if(e.keyCode==13){
-            location.href='verificador?codigo='+codigo;
+            $('#barCode').val(codigo);
+            $('#toVerifier').submit();
+            
         }else{
              codigo += String.fromCharCode(e.keyCode);
         }
