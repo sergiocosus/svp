@@ -19,50 +19,20 @@
     <!-- Slides Container -->
     <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
         height: 500px; overflow: hidden;">
+       
+        {% for ad in ads %}
         <div>
-            <img u="image" src="img/productos/001.jpg" />
+            <img u="image" src="img/ads/{{ad.id}}" />
+            <h2 class="tituloAnuncio" >
+                {{ad.title|e}}
+            </h2>
+            <br/>
             <div class="textoAnuncio" >
-                Gran descuento en <br/>Cereales y Leche!
+                {{ad.description}}
             </div>
         </div>
-         <div>
-            <img u="image" src="img/productos/002.jpg" />
-            <div class="textoAnuncio" >
-                Detergente al <br/>15% de descuento
-            </div>
-        </div>
-         <div>
-            <img u="image" src="img/productos/003.jpg" />
-            <div class="textoAnuncio" >
-                Toda la botana al 3X2
-            </div>
-        </div>
-         <div>
-            <img u="image" src="img/productos/004.jpg" />
-            <div class="textoAnuncio" >
-                <n>¿Sabias que?</n><br/> La miel de nuestra tienda es la más saludable
-            </div>
-        </div>
-         <div>
-            <img u="image" src="img/productos/005.jpg" />
-            <div class="textoAnuncio" >
-                La aceite más saludable para su hogar
-            </div>
-        </div>
-        <!--
-        <div>
-            <img u="image" src="img/1920/blue.jpg" />
-            <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                    color: #FFFFFF;">Touch Swipe Slider
-            </div>
-            <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                text-align: left; line-height: 36px; font-size: 30px;
-                    color: #FFFFFF;">
-                    Build your slider with anything, includes image, content, text, html, photo, picture
-            </div>
-        </div>
-        -->
+        {% endfor  %}
+        
     </div>
 
     <!-- bullet navigator container -->
@@ -95,12 +65,12 @@
         </a>
     </div>
 </nav> 
-
 <script>
-    meSpeak.loadConfig("js/mespeak/mespeak_config.json");
-    meSpeak.loadVoice('js/mespeak/voices/es-la.json');
+    var messagesToTalk=[];
+    {% for ad in ads %}
+        messagesToTalk.push({{ad.title|json_encode}});
+    {% endfor  %}
+</script>
 
-    meSpeak.speak('Cuac Cuác Cúac    "XD lol" !');
-    </script>
 
 {% endblock %}

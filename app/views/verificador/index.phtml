@@ -83,6 +83,11 @@
 
     <script>
         var verficador = new Verficador();
+        beep();
+        setTimeout(function(){
+            meSpeak.speak( {{producto.name|json_encode}} + "a tan solo " +{{producto.price|json_encode}});
+        },1000);
+       
     </script>
 
 

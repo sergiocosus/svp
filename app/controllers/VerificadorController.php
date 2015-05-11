@@ -5,7 +5,7 @@ class VerificadorController extends \Phalcon\Mvc\Controller
 
     public function indexAction()
     {
-     $this->view->disable();
+     //$this->view->disable();
         //$products=Product::find();
        /*
         $producto= new Product();

@@ -74,5 +74,16 @@
     $(window).bind("load", ScaleSlider);
     $(window).bind("resize", ScaleSlider);
     $(window).bind("orientationchange", ScaleSlider);
+    
+     
+    jssor_slider1.$On($JssorSlider$.$EVT_PARK,function(slideIndex,fromIndex){
+        meSpeak.speak(messagesToTalk[slideIndex],configuration);
+        console.log(slideIndex,fromIndex);
+    });
+    
+    
+
+    
     //responsive code end
 });
+
