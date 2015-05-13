@@ -5,7 +5,7 @@ class VerificadorController extends \Phalcon\Mvc\Controller
 
     public function indexAction()
     {
-     $this->view->disable();
+     //$this->view->disable();
         //$products=Product::find();
        /*
         $producto= new Product();
@@ -17,7 +17,8 @@ class VerificadorController extends \Phalcon\Mvc\Controller
         var_dump($producto->save());
         var_dump($producto->getMessages());
         * */
-        $product=Product::findFirstByBarCode($_POST['code']);
+        $algo=$_POST['code'];
+        $product=Product::findFirstByBarCode($algo);
         //var_dump($product->toArray());
         //echo json_encode($products->toArray());
         var_dump($_POST);
