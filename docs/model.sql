@@ -38,7 +38,7 @@ DROP TABLE IF EXISTS `svp`.`products` ;
 
 CREATE TABLE IF NOT EXISTS `svp`.`products` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `departamet_id` INT UNSIGNED NOT NULL,
+  `departament_id` INT UNSIGNED NOT NULL,
   `coupon_id` INT UNSIGNED NULL,
   `bar_code` VARCHAR(100) NULL,
   `name` VARCHAR(80) NOT NULL,
@@ -48,11 +48,11 @@ CREATE TABLE IF NOT EXISTS `svp`.`products` (
   `quantity` INT UNSIGNED NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `name_UNIQUE` (`name` ASC),
-  INDEX `fk_products_departament_idx` (`departamet_id` ASC),
+  INDEX `fk_products_departament_idx` (`departament_id` ASC),
   INDEX `fk_products_coupons_idx` (`coupon_id` ASC),
   UNIQUE INDEX `bar_code_UNIQUE` (`bar_code` ASC),
   CONSTRAINT `fk_products_departament`
-    FOREIGN KEY (`departamet_id`)
+    FOREIGN KEY (`departament_id`)
     REFERENCES `svp`.`departaments` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,

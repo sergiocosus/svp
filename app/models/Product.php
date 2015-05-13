@@ -13,7 +13,7 @@ class Product extends \Phalcon\Mvc\Model
      *
      * @var integer
      */
-    public $departamet_id;
+    public $departament_id;
 
     /**
      *
@@ -71,7 +71,7 @@ class Product extends \Phalcon\Mvc\Model
     {
         return array(
             'id' => 'id', 
-            'departamet_id' => 'departamet_id', 
+            'departament_id' => 'departament_id', 
             'coupon_id' => 'coupon_id', 
             'bar_code' => 'bar_code', 
             'name' => 'name', 
