@@ -21,7 +21,9 @@
         <div  style=" 
              font-family: fantasy;
              padding: 40px;
-             vertical-align: top;" class="inlineBlock ">
+             vertical-align: top;"
+             id="caracteristicas"
+             class="inlineBlock ">
             <ul style="list-style: none; width: 300px;">
                 <li><span id="codigo">{{producto.bar_code}}</span></li>
                 <li><span id="nombreP" style="font-size: 30px;">{{producto.name}}</span></li>
@@ -88,15 +90,27 @@
 
     <script>
         var verficador = new Verficador();
-        beep();
-        setTimeout(function(){
-            meSpeak.speak( {{producto.name|json_encode}} + "a tan solo " +{{producto.price|json_encode}});
-        },1000);
+        var $botonCupon = $("<div>", {class:"boton1", text:"IMPRIMIR CUPÓN", style:"position:absolute; top -20px; left:0px; right:0px; margin:auto;width:300px;"});
+        var coupon = {{coupon | json_encode}};
         var $descripcionV=$('#descripcionV');
         var $descripcionMostrar=$('#descripcionMostrar');
         var $inputRelatedProduct=$('#inputRelatedProduct');
         var $promocioneslol=$('#promocioneslol');
         var $formRelatedProduct=$('#formRelatedProduct');
+        var $caracteristicas=$('#caracteristicas');
+        
+        
+        beep();
+        setTimeout(function(){
+            if (coupon){
+                meSpeak.speak({{producto.name | json_encode}} + "a tan solo " + {{producto.price | json_encode}} + ". Este producto tiene un cupon");
+            } else{
+                meSpeak.speak({{producto.name | json_encode}} + "a tan solo " + {{producto.price | json_encode}});
+            }
+        }, 1000);
+        if (coupon){
+            $caracteristicas.append($botonCupon);
+        }
         
         $promocioneslol.children('div').on('click',function(){
            var barCode=$(this).data('barcode');
@@ -110,7 +124,9 @@
             });
         })
         
-        
+        $botonCupon.click(function(){
+            window.print();
+        });
        
     </script>
 
