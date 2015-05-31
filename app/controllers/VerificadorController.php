@@ -25,8 +25,11 @@ class VerificadorController extends \Phalcon\Mvc\Controller
         if(!$product){
             $product=new Product();
             $product->name="El producto no existe";
-            $product->price="JAJAJAJAJAJ XD LOL";
+            $product->price="";
         }
+        //$coupon=Coupon::findFirst($product->coupon_id);
+        
+        $this->view->setVar('coupon',$product->coupon);
         $this->view->setVar("producto", $product);
        
     }

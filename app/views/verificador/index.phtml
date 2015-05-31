@@ -3,10 +3,10 @@
 {% block titulo %} Verificador de precios {% endblock %}
 
 {% block cuerpo %}
-<a href="verificador#paginaActual"><div class="boton1"><img src="img/arriba.svg" class="botonSubir"/></div></a>
-<div style="text-align: center;margin-bottom: 70px; ">
+<a class="noImprimir" href="verificador#paginaActual"><div class="boton1"><img src="img/arriba.svg" class="botonSubir"/></div></a>
+<div class="noImprimir" style="text-align: center;margin-bottom: 70px;">
 
-    
+
     <div style="
          display: inline-block;  overflow: hidden; 
          width: 700px;
@@ -18,10 +18,7 @@
             <img src="img/laptop.png" style="width:300px;height:300px;float: right;">
         </div>
         <script >
-        var producto={{producto|json_encode}};
-                
-            
-        </script>
+            var producto = {{producto | json_encode}};</script>
         <div style=" 
              font-family: fantasy;
              padding: 40px;
@@ -34,7 +31,7 @@
                        style="">
                         Ver Descripcion
                     </a></li>
-                
+
                 <li style="
                     padding: 10px;
                     margin-top: 20px;
@@ -47,7 +44,7 @@
                     <span id="precioP" style="
                           font-size: 60px;color:greenyellow;
                           text-shadow: 2px 2px 5px black;
-                          
+
                           " >   
                         {{producto.price}}
                     </span></li>
@@ -68,6 +65,7 @@
          background-color: rgba(57, 100, 60,.5);
          border-radius: 10px;
          padding: 15px;
+         position:relative;
          " class="">
         <p>{{producto.description}}</p>
     </div><div id="promocioneslol">
@@ -81,16 +79,66 @@
     </div>
 
 
+    <style>
+        #cupon{
+            display:none;
+        }
+        @media print{
+            #cupon{
+                display:inline-block;
+            }
+            .noImprimir{
+                display:none;
+            }
+        }
+    </style>
+
     <script>
-        var verficador = new Verficador();
-        beep();
-        setTimeout(function(){
-            meSpeak.speak( {{producto.name|json_encode}} + "a tan solo " +{{producto.price|json_encode}});
-        },1000);
-       
+                var verficador = new Verficador();
+                var $botonCupon = $("<div>", {class:"boton1", text:"IMPRIMIR CUPÓN", style:"position:absolute; top -20px; left:0px; right:0px; margin:auto;width:300px;"});
+                var coupon = {{coupon | json_encode}};
+                beep();
+                setTimeout(function(){
+
+                if (coupon){
+
+                meSpeak.speak({{producto.name | json_encode}} + "a tan solo " + {{producto.price | json_encode}} + ". Este producto tiene un cupon");
+                } else{
+                meSpeak.speak({{producto.name | json_encode}} + "a tan solo " + {{producto.price | json_encode}});
+                }
+                }, 1000);
+                if (coupon){
+        $("#descripcionMostrar").append($botonCupon);
+        
+        }
+
+    $botonCupon.click(function(){
+        
+        window.print();
+    });
+
+
     </script>
 
 
+
+</div>
+
+<div id="cupon" style="border:1px solid black;height: 100px;">
+    <h1>CUPÓN DE DESCUENTO</h1>
+    <div style="border:1px solid black; height: 30px;">
+        
+        Producto: {{producto.name}}
+        
+    </div>
+
+    <div style=" height: 70px; float: right;vertical-align: bottom;">
+        
+        <n>Descripcion: </n>{{coupon.description}}
+        <br/>
+        <n>Cupon no:</n>{{coupon.id}}
+        
+    </div>
 
 </div>
 {% endblock %}
