@@ -8,3 +8,17 @@ and open the template in the editor.
     Author     : Trabajo
 */
 
+.listaBotones{
+    display: inline-block;
+}
+.listaBotones li{
+    list-style: none;
+}
+
+.listaBotones li{
+    background-color: gray;
+    height: 57px;
+    width: 100px;
+    padding: 10px;
+    border:1px solid lightgray;
+}
