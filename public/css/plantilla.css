@@ -177,25 +177,43 @@ footer span{
 }
 #promocioneslol{
     position: fixed;
-    bottom: 50px;
-    width: 800px;
+    bottom: 60px;
+    width: 90%;
     left: 0px;
     right:0px;
     margin: auto;
-    height: 40px;
-    background-color: yellow;
+    height: 70px;
+    background-color: rgba(155,155,0,.5);
+    border-radius: 10px;
     font-size: 20px;
     font-family: fantasy;
+    overflow: hidden;
 }
 #promocioneslol div{
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-top:10px;
+    margin-left:10px;
     display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
 }
 #promocioneslol div img{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+    max-width: 55px;
+    max-height: 55px;
+}
+#promocioneslol div span{
+    display:inline-block;
+    vertical-align: top;
+    margin:0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width:100px;
+}
+
+#promocioneslol > span{
+    display:inline-block;
+    width:100px;
+    vertical-align: top;
+    margin:10px;
     
 }
 

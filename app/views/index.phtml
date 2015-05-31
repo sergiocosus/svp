@@ -13,6 +13,8 @@
         {{ javascript_include('js/verificadorJS.js') }}
         {{ javascript_include('js/jquery-1.11.2.min.js') }}
         {{ javascript_include('js/mespeak/mespeak.full.js') }}
+        {{ javascript_include('js/jquery.modal.min.js') }}
+        {{ stylesheet_link('css/jquery.modal.css') }}
         <script>
             meSpeak.loadConfig("js/mespeak/mespeak_config.json");
             meSpeak.loadVoice('js/mespeak/voices/es-la.json');
@@ -20,7 +22,6 @@
                 amplitude:100,
                 pitch:45,
                 speed:175,
-                //voice:,
                 wordgap:1,
                 variant:"m3"
                 
