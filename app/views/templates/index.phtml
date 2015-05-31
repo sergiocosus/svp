@@ -1,5 +1,5 @@
 {# templates/index.phtml #}
-<header>
+<header class="noImprimir">
     <div>
         <a class="puntero" href="javascript:history.back()">
             <img id="flecha" style="width: 64px;height: 64px;"src="img/flechaIzq.png"/>
@@ -16,12 +16,12 @@
     </div>
     <div id=""></div>
 </header>
-<div style="margin-bottom: 70px; ">
+<div style="margin-bottom: 70px; position: relative;"    >
     {% block cuerpo %}
 
     {% endblock %}
 </div>
-<footer>
+<footer class="noImprimir">
     <span id="mensaje1">VERIFICADOR DE PRECIOS</span>
     <br/>
     <span id="mensaje2">PASE SU PRODUCTO</span>

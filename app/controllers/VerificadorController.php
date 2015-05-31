@@ -17,7 +17,8 @@ class VerificadorController extends \Phalcon\Mvc\Controller
         var_dump($producto->save());
         var_dump($producto->getMessages());
         * */
-        $product=Product::findFirstByBarCode($_POST['code']);
+        $algo=$_POST['code'];
+        $product=Product::findFirstByBarCode($algo);
         //var_dump($product->toArray());
         //echo json_encode($products->toArray());
         $related=[];
@@ -29,9 +30,12 @@ class VerificadorController extends \Phalcon\Mvc\Controller
        
         if(!$product){
             $product=new Product();
-            $product->name="El producto no existe, favor de contactar el precio en cajas";
-            $product->price="U.u";
+            $product->name="El producto no existe";
+            $product->price="";
         }
+        //$coupon=Coupon::findFirst($product->coupon_id);
+        
+        $this->view->setVar('coupon',$product->coupon);
         $this->view->setVar("producto", $product);
         $this->view->setVar('relatedProducts', $related);
     }

@@ -17,10 +17,7 @@
             <img src="img/products/{{producto.id}}" style="position:absolute;top:0px; left:0px; bottom:0px; right:0px; margin:auto;max-width:300px; max-height:300px;">
         </div>
         <script >
-        var producto={{producto|json_encode}};
-                
-            
-        </script>
+            var producto = {{producto | json_encode}};</script>
         <div style=" 
              font-family: fantasy;
              padding: 40px;
@@ -33,7 +30,7 @@
                        style="">
                         Ver Descripcion
                     </a></li>
-                
+
                 <li style="
                     padding: 10px;
                     margin-top: 20px;
@@ -46,7 +43,7 @@
                     <span id="precioP" style="
                           font-size: 60px;color:greenyellow;
                           text-shadow: 2px 2px 5px black;
-                          
+
                           " >   
                         {{producto.price}}
                     </span></li>
@@ -74,6 +71,20 @@
     <form  id="formRelatedProduct" action="verificador" method="POST">
         <input type="hidden" name="code" id="inputRelatedProduct"/>
     </form>
+
+    <style>
+        #cupon{
+            display:none;
+        }
+        @media print{
+            #cupon{
+                display:inline-block;
+            }
+            .noImprimir{
+                display:none;
+            }
+        }
+    </style>
 
     <script>
         var verficador = new Verficador();
@@ -103,6 +114,24 @@
     </script>
 
 
+
+</div>
+
+<div id="cupon" style="border:1px solid black;height: 100px;">
+    <h1>CUPÓN DE DESCUENTO</h1>
+    <div style="border:1px solid black; height: 30px;">
+        
+        Producto: {{producto.name}}
+        
+    </div>
+
+    <div style=" height: 70px; float: right;vertical-align: bottom;">
+        
+        <n>Descripcion: </n>{{coupon.description}}
+        <br/>
+        <n>Cupon no:</n>{{coupon.id}}
+        
+    </div>
 
 </div>
 {% endblock %}
