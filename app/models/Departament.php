@@ -27,7 +27,7 @@ class Departament extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->setSource('departaments');
-        $this->hasMany('id', 'Products', 'departamet_id', array('alias' => 'Products'));
+        $this->hasMany('id', 'Product', 'departament_id', array('alias' => 'Products'));
     }
 
     /**

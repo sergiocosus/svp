@@ -3,9 +3,8 @@
 {% block titulo %} Verificador de precios {% endblock %}
 
 {% block cuerpo %}
-<a class="noImprimir" href="verificador#paginaActual"><div class="boton1"><img src="img/arriba.svg" class="botonSubir"/></div></a>
-<div class="noImprimir" style="text-align: center;margin-bottom: 70px;">
-
+<!--<a href="verificador#paginaActual"><div class="boton1"><img src="img/arriba.svg" class="botonSubir"/></div></a> -->
+<div style="text-align: center;margin-bottom: 70px; ">
 
     <div style="
          display: inline-block;  overflow: hidden; 
@@ -14,8 +13,8 @@
          border-radius: 30px;
          background-color: rgba(0,50,0,.2);
          padding: 10px;">
-        <div style="" class="inlineBlock">
-            <img src="img/laptop.png" style="width:300px;height:300px;float: right;">
+        <div style="position:relative; width:300px; height: 300px;" class="inlineBlock">
+            <img src="img/products/{{producto.id}}" style="position:absolute;top:0px; left:0px; bottom:0px; right:0px; margin:auto;max-width:300px; max-height:300px;">
         </div>
         <script >
             var producto = {{producto | json_encode}};</script>
@@ -56,7 +55,7 @@
 
 
 
-    <div id="descripcionMostrar" style="margin-left:60px;
+    <div id="descripcionMostrar" style=" display:none; margin-left:60px;
          color:white;
          font-size: 20px;
          margin-right:60px; 
@@ -65,17 +64,20 @@
          background-color: rgba(57, 100, 60,.5);
          border-radius: 10px;
          padding: 15px;
-         position:relative;
+         width:80%;
+         height: 80%;
          " class="">
         <p>{{producto.description}}</p>
-    </div><div id="promocioneslol">
+    </div>
+         
+    <div id="promocioneslol">
         <span>Productos Similares:</span>
-        <div><img src="img/laptop.png"></div>
-        <div><img src="img/laptop.png"></div>
-        <div><img src="img/laptop.png"></div>
-        <div><img src="img/laptop.png"></div>
-        <div><img src="img/laptop.png"></div>
-        <div><img src="img/laptop.png"></div>
+        {% for relatedProduct in relatedProducts %}
+            <div>
+                <img src="img/products/{{ relatedProduct.id}}">
+                <span>{{ relatedProduct.name }}</span>
+            </div>
+        {% endfor %}
     </div>
 
 
@@ -94,30 +96,21 @@
     </style>
 
     <script>
-                var verficador = new Verficador();
-                var $botonCupon = $("<div>", {class:"boton1", text:"IMPRIMIR CUPÓN", style:"position:absolute; top -20px; left:0px; right:0px; margin:auto;width:300px;"});
-                var coupon = {{coupon | json_encode}};
-                beep();
-                setTimeout(function(){
-
-                if (coupon){
-
-                meSpeak.speak({{producto.name | json_encode}} + "a tan solo " + {{producto.price | json_encode}} + ". Este producto tiene un cupon");
-                } else{
-                meSpeak.speak({{producto.name | json_encode}} + "a tan solo " + {{producto.price | json_encode}});
-                }
-                }, 1000);
-                if (coupon){
-        $("#descripcionMostrar").append($botonCupon);
+        var verficador = new Verficador();
+        beep();
+        setTimeout(function(){
+            meSpeak.speak( {{producto.name|json_encode}} + "a tan solo " +{{producto.price|json_encode}});
+        },1000);
+        var $descripcionV=$('#descripcionV');
+        var $descripcionMostrar=$('#descripcionMostrar');
         
-        }
-
-    $botonCupon.click(function(){
         
-        window.print();
-    });
-
-
+        $descripcionV.on('click',function(){
+            $descripcionMostrar.modal({
+                fadeDuration: 100
+            });
+        })
+       
     </script>
 
 

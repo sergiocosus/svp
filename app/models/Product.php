@@ -60,7 +60,7 @@ class Product extends \Phalcon\Mvc\Model
     {
         $this->setSource('products');
         $this->hasMany('id', 'Ads', 'product_id', array('alias' => 'Ads'));
-        $this->belongsTo('departamet_id', 'Departamet', 'id', array('alias' => 'Departamet'));
+        $this->belongsTo('departament_id', 'Departament', 'id', array('alias' => 'Departament'));
         $this->belongsTo('coupon_id', 'Coupon', 'id', array('alias' => 'Coupon'));
     }
    
