@@ -58,31 +58,22 @@
 
 
 
-    <div id="descripcionMostrar" style=" display:none; margin-left:60px;
-         color:white;
-         font-size: 20px;
-         margin-right:60px; 
-         text-align : justify; 
-         margin-bottom: 150px; 
-         background-color: rgba(57, 100, 60,.5);
-         border-radius: 10px;
-         padding: 15px;
-         width:80%;
-         height: 80%;
-         " class="">
-        <p>{{producto.description}}</p>
+    <div id="descripcionMostrar" >
+        <div>{{producto.description}}</div>
     </div>
          
     <div id="promocioneslol">
         <span>Productos Similares:</span>
         {% for relatedProduct in relatedProducts %}
-            <div>
+            <div data-barCode="{{ relatedProduct.bar_code | e }}">
                 <img src="img/products/{{ relatedProduct.id}}">
                 <span>{{ relatedProduct.name }}</span>
             </div>
         {% endfor %}
     </div>
-
+    <form  id="formRelatedProduct" action="verificador" method="POST">
+        <input type="hidden" name="code" id="inputRelatedProduct"/>
+    </form>
 
     <script>
         var verficador = new Verficador();
@@ -92,13 +83,22 @@
         },1000);
         var $descripcionV=$('#descripcionV');
         var $descripcionMostrar=$('#descripcionMostrar');
-        
+        var $inputRelatedProduct=$('#inputRelatedProduct');
+        var $promocioneslol=$('#promocioneslol');
+        var $formRelatedProduct=$('#formRelatedProduct');
+        $promocioneslol.children('div').on('click',function(){
+           var barCode=$(this).data('barcode');
+           $inputRelatedProduct.val(barCode);
+           $formRelatedProduct.submit();
+        })
         
         $descripcionV.on('click',function(){
             $descripcionMostrar.modal({
                 fadeDuration: 100
             });
         })
+        
+        
        
     </script>
 
