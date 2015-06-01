@@ -3,20 +3,20 @@
 
 {% block titulo %} Departamentos {% endblock %}
 {% block cuerpo %}
-<div style="position: absolute; top: 0px; bottom: 0px; margin: auto;">
+<div id="panel">
     <div class="listaBotones" style="float: left;">
         <ul>
-            <li>Cremeria y Salchichoneria</li>
-            <li>Frutas y verduras</li>
-            <li>Panaderia</li>
-            <li>Farmacia</li>
-            <li>Cajas</li>
-            <li>Baños</li>
-            <li>Abarrotes</li>
+            <li ><span>Cremeria y Salchichoneria</span></li>
+            <li><span>Frutas y verduras</span></li>
+            <li><span>Panaderi</span>a</li>
+            <li><span>Farmacia</span></li>
+            <li><span>Cajas</span></li>
+            <li><span>Baños</span></li>
+            <li><span>Abarrotes</span></li>
         </ul>
     </div>
-    <div style="display: inline-block;">
-        <img src="img/planoTienda.png" style=""/>
+    <div id="mapaDiv">
+        <img src="img/planoTienda.png"  style="border:1px solid black;"/>
         <div></div>
         <div></div>
         <div></div>
@@ -32,18 +32,21 @@
     </div>
     <div class="listaBotones" style="float: right;">
         <ul>
-            <li>Electronica</li>
-            <li>Ferreteria</li>
-            <li>Ropa</li>
-            <li>Papeleria</li>
-            <li>Deportes</li>
-            <li>Jugueteria</li>
-            <li>Entretenimiento</li>
+            <li><span>Electronica</span></li>
+            <li><span>Ferreteria</span></li>
+            <li><span>Ropa</span></li>
+            <li><span>Papeleria</span></li>
+            <li><span>Deportes</span></li>
+            <li><span>Jugueteria</span></li>
+            <li><span>Entretenimiento</span></li>
         </ul>
     </div>
 </div>
 <style>
     #cuerpo{
+        margin: 0px;
+        position: absolute;
+        top: 0px;
         height: 100%;
         width: 100%;
     }

@@ -17,8 +17,49 @@ and open the template in the editor.
 
 .listaBotones li{
     background-color: gray;
-    height: 57px;
-    width: 100px;
-    padding: 10px;
+    height: 77px;
+    width: 120px;
+       
     border:1px solid lightgray;
+    border-radius: 10px;
+    color:white;
+    text-align: center;
+    font-size: 18px;
+}
+.listaBotones li span{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+#panel{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 1360px;
+    height: 534px;
+    background-color: rgba(100,100,100,.5);
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+}
+
+#mapaDiv{
+    background-color: rgba(50,50,50,.5);
+    width: 1084px;
+    height: 536px;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+
+.botonClick{
+    background-color: #292929 !important;
 }
