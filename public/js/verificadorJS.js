@@ -11,3 +11,17 @@ var Verficador=function(){
         $("#descripcionMostrar").removeClass("displayNone");
     });
 };
+
+
+
+function ajax(type, url, data, success, error) {
+    $.ajax({
+        type: type,
+        url: url,
+        contentType: "application/json; charset=utf-8",
+        dataType: "JSON",
+        data: data,
+        success: debugWithCallback(success, url, data, type),
+        error: error
+    });
+}

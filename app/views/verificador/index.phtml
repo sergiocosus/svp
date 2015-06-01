@@ -4,7 +4,7 @@
 
 {% block cuerpo %}
 <!--<a href="verificador#paginaActual"><div class="boton1"><img src="img/arriba.svg" class="botonSubir"/></div></a> -->
-<div style="text-align: center;margin-bottom: 70px; ">
+<div class="noImprimir" style="text-align: center;margin-bottom: 70px; ">
 
     <div style="
          display: inline-block;  overflow: hidden; 
@@ -18,10 +18,12 @@
         </div>
         <script >
             var producto = {{producto | json_encode}};</script>
-        <div style=" 
+        <div  style=" 
              font-family: fantasy;
              padding: 40px;
-             vertical-align: top;" class="inlineBlock">
+             vertical-align: top;"
+             id="caracteristicas"
+             class="inlineBlock ">
             <ul style="list-style: none; width: 300px;">
                 <li><span id="codigo">{{producto.bar_code}}</span></li>
                 <li><span id="nombreP" style="font-size: 30px;">{{producto.name}}</span></li>
@@ -55,31 +57,22 @@
 
 
 
-    <div id="descripcionMostrar" style=" display:none; margin-left:60px;
-         color:white;
-         font-size: 20px;
-         margin-right:60px; 
-         text-align : justify; 
-         margin-bottom: 150px; 
-         background-color: rgba(57, 100, 60,.5);
-         border-radius: 10px;
-         padding: 15px;
-         width:80%;
-         height: 80%;
-         " class="">
-        <p>{{producto.description}}</p>
+    <div class="noImprimir" id="descripcionMostrar" >
+        <div>{{producto.description}}</div>
     </div>
          
-    <div id="promocioneslol">
+    <div class="noImprimir" id="promocioneslol">
         <span>Productos Similares:</span>
         {% for relatedProduct in relatedProducts %}
-            <div>
-                <img src="img/products/{{ relatedProduct.id}}">
-                <span>{{ relatedProduct.name }}</span>
+            <div data-barCode="{{ relatedProduct['bar_code'] | e }}">
+                <img src="img/products/{{ relatedProduct['id']}}">
+                <span>{{ relatedProduct['name'] }}</span>
             </div>
         {% endfor %}
     </div>
-
+    <form  id="formRelatedProduct" action="verificador" method="POST">
+        <input type="hidden" name="code" id="inputRelatedProduct"/>
+    </form>
 
     <style>
         #cupon{
@@ -97,19 +90,43 @@
 
     <script>
         var verficador = new Verficador();
-        beep();
-        setTimeout(function(){
-            meSpeak.speak( {{producto.name|json_encode}} + "a tan solo " +{{producto.price|json_encode}});
-        },1000);
+        var $botonCupon = $("<div>", {class:"boton1", text:"IMPRIMIR CUPÓN", style:"position:absolute; bottom: -40px; left:0px; right:0px; margin:auto;width:300px;"});
+        var coupon = {{coupon | json_encode}};
         var $descripcionV=$('#descripcionV');
         var $descripcionMostrar=$('#descripcionMostrar');
+        var $inputRelatedProduct=$('#inputRelatedProduct');
+        var $promocioneslol=$('#promocioneslol');
+        var $formRelatedProduct=$('#formRelatedProduct');
+        var $caracteristicas=$('#caracteristicas');
         
+        
+        beep();
+        setTimeout(function(){
+            if (coupon){
+                meSpeak.speak({{producto.name | json_encode}} + "a tan solo " + {{producto.price | json_encode}} + ". Este producto tiene un cupon");
+            } else{
+                meSpeak.speak({{producto.name | json_encode}} + "a tan solo " + {{producto.price | json_encode}});
+            }
+        }, 1000);
+        if (coupon){
+            $caracteristicas.append($botonCupon);
+        }
+        
+        $promocioneslol.children('div').on('click',function(){
+           var barCode=$(this).data('barcode');
+           $inputRelatedProduct.val(barCode);
+           $formRelatedProduct.submit();
+        })
         
         $descripcionV.on('click',function(){
             $descripcionMostrar.modal({
                 fadeDuration: 100
             });
         })
+        
+        $botonCupon.click(function(){
+            window.print();
+        });
        
     </script>
 
