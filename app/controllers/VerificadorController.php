@@ -5,7 +5,7 @@ class VerificadorController extends \Phalcon\Mvc\Controller
 
     public function indexAction()
     {
-    // $this->view->disable();
+    //$this->view->disable();
         //$products=Product::find();
        /*
         $producto= new Product();
@@ -25,7 +25,10 @@ class VerificadorController extends \Phalcon\Mvc\Controller
         if($product){
             $related=$product
                     ->departament
-                    ->products;
+                    ->getProducts(
+                        ["hydration" => Phalcon\Mvc\Model\Resultset::HYDRATE_OBJECTS]
+                    )->toArray();
+            shuffle($related);
         }
        
         if(!$product){
