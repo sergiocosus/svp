@@ -214,7 +214,7 @@ footer span{
     font-family: fantasy;
     overflow: hidden;
 }
-#promocioneslol div{
+#promocioneslol a{
     margin-top:5px;
     margin-left:10px;
     display: inline-block;
@@ -224,11 +224,11 @@ footer span{
     padding:5px;
     border-radius: 5px;
 }
-#promocioneslol div img{
+#promocioneslol a img{
     max-width: 55px;
     max-height: 55px;
 }
-#promocioneslol div span{
+#promocioneslol a span{
     display:inline-block;
     vertical-align: top;
     margin:0px;
@@ -393,4 +393,43 @@ a:hover{text-decoration: none;}
 #cuerpo{
     margin-bottom: 70px;
     position: relative;
+}
+
+#listaProductos{
+    width:100%;
+    text-align: center;
+}
+
+#listaProductos a{
+    display: inline-block;
+    background-color: rgba(0,0,150,.5);
+    width:200px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+
+
+#listaProductos img{
+    display: block;
+    max-height: 200px;
+    column-width:200px;
+    border-radius: 10px;
+}
+#listaProductos span{
+    display: inline-block;
+    color:white;
+    font-family: fantasy;
+    margin:5px;
+    padding:5px;
+}
+
+h1{
+    background-color: rgba(150,0,150,.5);
+    font-size: 40px;
+    color:white;
+    font-family: fantasy;
+    padding: 5px;
+    text-align: center;
 }

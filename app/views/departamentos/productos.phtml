@@ -1,0 +1,18 @@
+{% extends "templates/index.phtml" %}
+
+{% block titulo %} Productos por departamento {% endblock %}
+{% block cuerpo %}
+
+
+<h1>Departamento de "{{departament.name}}"</h1>
+<div class="noImprimir" id="listaProductos">
+    <span>Productos Similares:</span>
+    {% for product in departament.products %}
+        <a href="verificador?code={{ product.bar_code | e }}">
+            <img src="img/products/{{ product.id}}">
+            <span>{{ product.name }}</span>
+        </a>
+    {% endfor %}
+</div>
+
+{% endblock %}

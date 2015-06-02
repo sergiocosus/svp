@@ -70,18 +70,18 @@
     <div class="noImprimir" id="promocioneslol">
         <span>Productos Similares:</span>
         {% for relatedProduct in relatedProducts %}
-            <div data-barCode="{{ relatedProduct['bar_code'] | e }}">
+            <a href="verificador?code={{ relatedProduct['bar_code'] | e }}">
                 <img src="img/products/{{ relatedProduct['id']}}">
                 <span>{{ relatedProduct['name'] }}</span>
-            </div>
+            </a>
         {% endfor %}
     </div>
+    
+    
     <form  id="formRelatedProduct" action="verificador" method="POST">
         <input type="hidden" name="code" id="inputRelatedProduct"/>
     </form>
-    <form  id="formDepartamentt" action="departamentos" method="POST">
-        <input type="hidden" name="departament_id" value="{{ producto.departament.id }}" id="inputDepartament"/>
-    </form>
+  
 
     <style>
         #cupon{
