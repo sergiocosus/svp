@@ -21,7 +21,7 @@
         height: 500px; overflow: hidden;">
        
         {% for ad in ads %}
-        <div>
+        <div><a>
             <img u="image" src="img/ads/{{ad.id}}" />
             <h2 class="tituloAnuncio" >
                 {{ad.title|e}}
@@ -30,6 +30,7 @@
             <div class="textoAnuncio" >
                 {{ad.description}}
             </div>
+            </a>
         </div>
         {% endfor  %}
         
