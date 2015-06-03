@@ -143,13 +143,14 @@ footer img{
     background-color: rgba(0, 70, 160,.5);
     border-radius: 10px;
     padding: 15px;
+    font-family: fantasy;
     width:80%;
-    height: 80%;
+  
 }
 
 #descripcionMostrar div{
-    overflow: hidden;
-    overflow-y:auto;
+
+
 }
 
 
