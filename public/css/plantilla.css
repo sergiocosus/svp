@@ -442,8 +442,9 @@ h1{
     text-align: center;
 }
 #datos{
+    font-family: fantasy;
     position:absolute;
-    /*border: 1px black dashed;*/
+    border: 1px black dashed;
     height: 550px;
     width: 750px;
     background-color: rgba(0,256,0,.4);

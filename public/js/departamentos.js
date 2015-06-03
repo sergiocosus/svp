@@ -7,6 +7,21 @@
 
 $(document).ready(function(){
     var $botones = $(".listaBotones li");
+    var idDepto=departament.id;
+    console.log(departament.id);
+    if(idDepto=="1"){$("#botonDepto1").click();}
+    if(idDepto=="2"){$("#botonDepto2").click();}
+    if(idDepto=="3"){$("#botonDepto3").click();}
+    if(idDepto=="4"){$("#botonDepto4").click();}
+    if(idDepto=="5"){$("#botonDepto5").click();}
+    if(idDepto=="6"){$("#botonDepto8").click();}
+    if(idDepto=="7"){$("#botonDepto9").click();}
+    if(idDepto=="8"){$("#botonDepto10").click();}
+    if(idDepto=="9"){$("#botonDepto11").click();}
+    if(idDepto=="10"){$("#botonDepto12").click();}
+    if(idDepto=="11"){$("#botonDepto13").click();}
+    if(idDepto=="12"){$("#botonDepto14").click();}
+
     $botones.on('click',function(){
         $botones.removeClass("botonClick");
         $(this).addClass("botonClick");

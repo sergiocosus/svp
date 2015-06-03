@@ -3,6 +3,13 @@
 
 {% block titulo %} Departamentos {% endblock %}
 {% block cuerpo %}
+
+<script>
+
+var departament={{departament | json_encode}};
+console.log(departament);
+        
+</script>
 <div id="panel">
     <div class="listaBotones" style="float: left;">
         <ul>
@@ -61,10 +68,10 @@
                <br>Presione para ver lista</span>
             </div></a>
        <a href="departamentos/productos?departament_id=6"><div class="deptos" id="depto12">
-           <span style="height:30px;width: 200px">Electronica
+           <span style="height:35px;width: 200px">Electronica
                <br>Presione para ver lista</span>
             </div></a><a href="departamentos/productos?departament_id=6"><div class="deptos" id="depto13">
-           <span style="height:30px;width: 200px">Electronica
+           <span style="height:35px;width: 200px">Electronica
                <br>Presione para ver lista</span>
             </div></a>
        <a href="departamentos/productos?departament_id=5"><div class="deptos" id="depto14">
