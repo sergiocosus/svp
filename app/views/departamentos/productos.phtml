@@ -6,7 +6,6 @@
 
 <h1>Departamento de "{{departament.name}}"</h1>
 <div class="noImprimir" id="listaProductos">
-    <span>Productos Similares:</span>
     {% for product in departament.products %}
         <a href="verificador?code={{ product.bar_code | e }}">
             <img src="img/products/{{ product.id}}">

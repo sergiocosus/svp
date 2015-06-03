@@ -161,8 +161,53 @@ insert into products (id,bar_code,name, price, departament_id,coupon_id,descript
 							</tbody></table>
 						
 					</div>
-			</div>');
+			</div>'),
+(5,'5','Playera American Gothic',250.00,8,null,
+'En ACAPELLA, reconocemos que el gran arte existe y se crea continuamente para empujar los límites y fomentar la expresión humana. Esta es la razón por la que trabajamos diariamente con nuestro equipo de diseño para crear representaciones gráficas e imágenes de impacto. También colaboramos con artistas de todo el mundo. Nuestras palyeras son cuidadosamente elaboradas y diseñadas para poner al resto de tu closet en vergüenza.'),
 
+(6,'6','Sueter Basico Botonn Abraxas 200- Negro',269,8,null,
+'Sueter ABRAXAS fabricado en Tejido de Punto, Sabemos que te gusta lucir a casual y a la moda en cualquier temporada, es por eso que Abraxas trae para ti este sofisticado y vanguardista Suéter con el que podrás quitarte el frio al mismo tiempo que lucirás con estilo y glamourosa. Está elaborado en tejido de punto con material de la más alta calidad para que tu prenda se más duradera y te brinde mayor confort a la hora de vestirla. El Suéter es básico para cualquier temporada es por eso que debes tener esta prenda en tu armario ya que te sacará de apuros.'),
+
+(7,'7','Paulie - Balerina Azul con Moño - Azul',307,8,null,
+'Especificaciones del producto
+SKU (simple)	PA307FA37EFYLMX
+Modelo	6115
+Color	Azul'),
+
+(8,'8','Kenneth Cole - Jeans Blanco Skinny - Blanco',899.00,8,null,
+'
+Especificaciones del producto
+SKU (simple)	KE239FA36DBZLMX
+Modelo	24PW0020
+Color	Blanco'),
+
+
+
+(9,'9','Pieza de Cortador de azulejo de 30 cm',199,7,null,
+'Especificaciones del producto
+SKU (simple)	PR836HL10NSFLMX
+Modelo	CAZ-30P
+Tamaño (L x P x A cm)	STD
+Peso (kg)	0.50
+Garantía del Producto	6 Meses solo por defectos de fabricación'),
+
+(10,'10','Pieza de Fumigador 5 lts, Pretul',189,7,null,
+'FUMIGADOR DE 5 LITROS PRETUL
+
+Para que puedas tener un mejor control de las plagas se han diseñado diferentes tipos de fumigadores que son fáciles de usar para cualquier persona, además de que por su versatilidad no solo se puede usar para pesticidas sino también para pesticidas, es por eso que Pretul te presenta su fumigador FUT-5LP que te ofrece una capacidad de 5 litros para que puedas tener una buena cantidad de fertilizante o pesticida, gracias a que cuenta con una manguera de PVC de 125cm tienes la longitud necesaria para poder esparcir de mejor manera el contenido del fumigador, el tanque del FUT-5LP está hecho con polietileno que lo hace altamente resistente a cualquier situación que se pueda presentar Pretul le añade una válvula de liberación de presión, así como una palanca de abierto/cerrado con un seguro que permite un trabajo continuo sin desperdiciar lo que se encuentra en el interior, para que puedas guardar el fumigador de Pretul sin que requiera de mucho espacio tanto la varilla de latón como la manguera son desmontables.'),
+
+(11,'11','Set de Set de herramientas para mecánica, 70 piezas, Pretul',319,7,null,
+'SET DE 70 PIEZAS DE HERRAMIENTAS
+No hay nada mejor que comprar todas las herramientas básicas que se usan con regularidad en las reparaciones de la casa Pretul sabe que es mejor hacer un gasto que parezca innecesario y fuerte a estar adquiriendo pieza por pieza que a la larga resulta ser más caro, es por eso que en esta ocasión Pretul te presenta su juego SET-70 que está constituido por 70 piezas entre llaves Allen, puntas de desarmadores, pinzas y más herramientas que serán las encargadas de facilitar el trabajo que tengas que realizar, Pretul le añade a este set un estuche de plástico ABS que lo hace resistente a los golpes o caídas que pueda sufrir, en el interior de este estuche hay compartimientos que te ayudarán a guardar de mejor manera tus herramientas y accesorios, además de que si es necesario podrás llevar contigo este set que Pretul pone a tu disposición por medio de Linio.'),
+
+(12,'12','Llanta Firestone Firehawk 900 215/60 R15 - Negro',1369,7,null,
+'El neumático ideal para los amantes de la velocidad. 
+
+Alto desempeño en pavimento seco y mojado gracias al compuesto y diseño innovador de su banda de rodamiento, la cual incorpora mayor rigidez de los bloques incrementado el performance de frenado en pavimento seco y mojado con alta resistencia al desgaste central. Diseño de hombros tipo “Bridge Shoulder” en los bloques lo cual proporciona excelente resistencia al desgate tipo “Punta–Talón”. Tacos gruesos y densos. Diseño redondeado. Estructura más sólida. El Firestone Multihawk de Firestone resulta imponente al mirarlo. Las dos nervaduras centrales, continuas y sólidas, ofrecen una máxima tracción y protección contra cualquier desgaste. La amplitud de los hombros, con ranuras profundas y microsurcos laterales delgados, facilita la dispersión del agua asegurando el buen contacto del neumático con la carretera.');
+/*
+(2,'2','CAMARA DE VIGILANCIA VONNIC',508.23,7,null,
+'');
+*/
 
 insert into ads (title,description,product_id) values
 ("Gran descuento en Cereales y Leche!", "En nuestra tienda tenemos de rebaja todos los cereales y la leche", 1),

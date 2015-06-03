@@ -37,7 +37,19 @@
         if(e.keyCode==13){
             $('#barCode').val(codigo);
             console.log(codigo);
-            $('#toVerifier').submit();
+            ajax('GET','verificador/exist/'+codigo,null, function(data){
+                if(data.exist){
+                    $('#toVerifier').submit();
+                }else{
+                    beep();
+                    noty({text:"El producto no se encuentra registrado, contacte a cajas para más información"});
+                    codigo="";
+                }
+            },
+            function(data){
+                console.error(data);
+            });
+            
             
         }else{
              codigo += String.fromCharCode(e.keyCode);

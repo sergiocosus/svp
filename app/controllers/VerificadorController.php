@@ -36,6 +36,9 @@ class VerificadorController extends \Phalcon\Mvc\Controller
             $product->name="El producto no existe";
             $product->price="";
         }
+        if($product->description==""){
+            $product->description="Lo sentimos... el producto no cuenta con una descripción";
+        }
         //$coupon=Coupon::findFirst($product->coupon_id);
         
         $this->view->setVar('coupon',$product->coupon);
@@ -45,6 +48,12 @@ class VerificadorController extends \Phalcon\Mvc\Controller
     
     public function testAction(){
         
+    }
+    
+    public function existAction($barCode) {
+        $this->view->disable();
+        header('Content-Type: application/json');
+        echo json_encode(['exist' => Product::findFirstByBarCode($barCode)?true:false]);
     }
 }
 

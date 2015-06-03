@@ -21,7 +21,7 @@ function ajax(type, url, data, success, error) {
         contentType: "application/json; charset=utf-8",
         dataType: "JSON",
         data: data,
-        success: debugWithCallback(success, url, data, type),
+        success: success,
         error: error
     });
 }
