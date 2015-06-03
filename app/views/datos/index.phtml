@@ -2,11 +2,74 @@
 {% extends "templates/index.phtml" %}
 
 {% block titulo %} Datos {% endblock %}
-{% block cuerpo %}
 
+{% block cuerpo %}
+<div id='datos'>
+    <ul>
+        <li>
+            <span class="nombreT">Nombre de la tienda</span>
+        </li>
+        <br/>
+        <li>
+            <span>Información de la Tienda</span>
+        </li>
+        <br/>
+        <li>
+            <span>Visión:</span>
+            <p>En [Nombre de la tienda]nos comprometemos a ofrecerle un buen servicio,
+                con el mejor trato,de mayor calidad ademas de los mejores precios cuidando
+                de su economia y hacer de su estancia en nuestras instalaciones lo mas agradable posible.
+            </p>
+        </li>
+        <br/>
+        <li>
+            <span>Dirección:</span>
+            <p>Av. Universidad y Blvd. Aguascalientes #S/N
+                Col. Bosques del Prado
+            </p>
+        </li>
+        
+        <li>
+            <span>Telefono:</span>
+            <p>912.0603 (01449) 912.0363 </p>
+        </li>
+        
+        <li>
+            <span>Dirección Web:</span>
+            <p>www.[nombreDeLaTienda].mx</p>
+        </li>
+        
+        <li>
+            <span>Contacto:</span>
+            <p>contacto@[nombreDeLaTienda].mx</p>
+        </li>
+        <br/>
+        <li>
+            <img src="img/qrplanet.png"/>
+        </li>
+    </ul>
+
+</div>
 <style>
+    ul{
+        list-style: none;
+        text-align: center;
+        font-size: 20px;
+    }
+    ul li span{
+        font-weight: bolder;
+    }
+    #cuerpo{
+        height: 100%;
+        width: 100%;
+    }
     body{
+        height: 100%;
+        width: 100%;
         background-image: url("img/congruent_pentagon_blue.png");
+    }
+    .nombreT{
+        font-size: 30px;
     }
 </style>
 

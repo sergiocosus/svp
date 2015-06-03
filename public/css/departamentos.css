@@ -13,16 +13,17 @@ and open the template in the editor.
 }
 .listaBotones li{
     list-style: none;
+    cursor:pointer;
 }
 
 .listaBotones li{
     background-color: gray;
     height: 77px;
     width: 120px;
-       
     border:1px solid lightgray;
     border-radius: 10px;
     color:white;
+    font-family: fantasy;
     text-align: center;
     font-size: 18px;
 }
@@ -72,6 +73,18 @@ and open the template in the editor.
     background-color: rgba(256,10,10,.6);
     position:absolute;
     border-radius:10px;
+}
+.deptos span{
+    font-family: fantasy;
+    font-weight: bolder;
+    text-align: center;
+    color:white;
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin: auto;
 }
 #depto1{
              width: 260px;
@@ -184,4 +197,11 @@ and open the template in the editor.
              z-index: 1000;
              top:0px;
              left:0px;
+}
+#depto15{
+             width: 60px;
+             height: 50px;
+             z-index: 1000;
+             top:0px;
+             left:460px;
 }
