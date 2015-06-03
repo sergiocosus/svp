@@ -3,22 +3,56 @@
 {% block titulo %} Departamentos {% endblock %}
 {% block cuerpo %}
 
-
-<h2>"{{ad.title}}"</h2>
+<style>
+     #cupon{
+         display:none;
+     }
+     @media print{
+         #cupon{
+             display:inline-block;
+         }
+         .noImprimir{
+             display:none;
+         }
+     }
+ </style>
+<h2 class="noImprimir">"{{ad.title}}"</h2>
 <div class="noImprimir" id="anunciote">
     <img src="img/ads/{{ ad.id}}">
     <div>
         <span>{{ ad.description }}</span>
         <br/>
         <div class="boton1" style="width:300px;">IMPRIMIR CUPÓN</div>
-         
     </div>
 </div>
 
+<div id="cupon" style="border:1px solid black;">
+    <h1>CUPÓN DE DESCUENTO</h1>
+    <div style=" border:1px solid black;vertical-align: bottom;">
+         <n>Cupon no:</n>{{ad.id}}
+        
+    </div>
+    <div style="border:1px solid black; ">
+        
+        Titulo: {{ad.title}}
+        
+    </div>
+
+    <div style="  border:1px solid black;vertical-align: bottom;">
+        
+        <n>Descripcion: </n>{{ad.description}}
+        
+    </div>
+    
+    <div style="  border:1px solid black;  vertical-align: bottom;">
+        <n>Favor de entregar este cupón en cajas</n>
+    </div>
+</div>
      
 <script>
-var $botonCupon = $("<div>", 
-    {class:"boton1", text:"IMPRIMIR CUPÓN", style:"width:300px;"});
+    $('.boton1').click(function(){
+            window.print();
+        });
 </script>            
 
 

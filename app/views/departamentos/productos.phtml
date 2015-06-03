@@ -2,19 +2,7 @@
 
 {% block titulo %} Productos por departamento {% endblock %}
 {% block cuerpo %}
-<style>
-     #cupon{
-         display:none;
-     }
-     @media print{
-         #cupon{
-             display:inline-block;
-         }
-         .noImprimir{
-             display:none;
-         }
-     }
- </style>
+
 
 <h1>Departamento de "{{departament.name}}"</h1>
 <div class="noImprimir" id="listaProductos">

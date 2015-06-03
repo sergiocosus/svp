@@ -147,21 +147,16 @@
 
 </div>
 
-<div id="cupon" style="border:1px solid black;height: 100px;">
+<div id="cupon" style="border:1px solid black;">
     <h1>CUPÓN DE DESCUENTO</h1>
-    <div style="border:1px solid black; height: 30px;">
-        
-        Producto: {{producto.name}}
-        
-    </div>
-
-    <div style=" height: 70px; float: right;vertical-align: bottom;">
-        
-        <n>Descripcion: </n>{{coupon.description}}
-        <br/>
+    <div style="border:1px solid black;">
         <n>Cupon no:</n>{{coupon.id}}
-        
     </div>
-
+    <div style="border:1px solid black; height: 30px;">
+        Producto: {{producto.name}}
+    </div>
+    <div style="border:1px solid black;">
+        <n>Descripcion: </n>{{coupon.description}}
+    </div>
 </div>
 {% endblock %}

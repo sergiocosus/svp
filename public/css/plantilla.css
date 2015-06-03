@@ -379,6 +379,7 @@ a:hover{text-decoration: none;}
     background-color: rgba(0, 50, 0,.4);
     font-size: 30px;
     cursor: pointer;
+    padding:10px;
     box-shadow: 1px 1px 10px black;
     text-align: center;
     margin: 10px;
@@ -418,7 +419,7 @@ a:hover{text-decoration: none;}
         -webkit-column-width: 200px; /* Chrome, Safari, Opera */
     -moz-column-width: 200px; /* Firefox */
     column-width: 200px;
-    vertical-align: top;
+    vertical-align: top;    
 }
 
 
@@ -472,6 +473,7 @@ h2{
     display:inline-block;
     max-width: 50%;
     margin:30px;
+    
     border-radius: 30px;
 }
 #anunciote > div{
@@ -484,4 +486,6 @@ h2{
     text-align: center;
     font-size: 30px;
 }
-
+#anunciote > div{
+    padding:50px;
+}
