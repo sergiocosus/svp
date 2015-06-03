@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS `svp`.`coupons` ;
 
 CREATE TABLE IF NOT EXISTS `svp`.`coupons` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `description` tinytext NULL,
+  `description` tinytext     NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
