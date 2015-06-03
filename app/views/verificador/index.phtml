@@ -68,7 +68,7 @@
     </div>
          
     <div class="noImprimir" id="promocioneslol">
-        <span>Productos Similares:</span>
+        <div>Productos Similares:</div>
         {% for relatedProduct in relatedProducts %}
             <a href="verificador?code={{ relatedProduct['bar_code'] | e }}">
                 <img src="img/products/{{ relatedProduct['id']}}">
