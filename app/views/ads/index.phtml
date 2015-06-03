@@ -20,9 +20,11 @@
 <div class="noImprimir" id="anunciote">
     <img src="img/ads/{{ ad.id}}">
     <div>
-        <span>{{ ad.description }}</span>
+        <span>{{ ad.description |e }}</span>
         <br/>
         <div class="boton1" style="width:300px;">IMPRIMIR CUPÓN</div>
+        
+        <span> Imprima este cupón y muestrelo en cajas para hacer válida la promoción</span>
     </div>
 </div>
 

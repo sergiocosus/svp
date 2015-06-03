@@ -213,7 +213,7 @@ insert into ads (title,description,product_id) values
 ("Gran descuento en Cereales y Leche!", "En nuestra tienda tenemos de rebaja todos los cereales y la leche", 1),
 ("Detergente al 15% de descuento", "Todos los detergentes de tamaño superior a 1L cuentan con un 15% de descuento!!!",1),
 ("Toda botana al 3 por 2", "Ahora todos los empaques de sabritas y barcel compiten con nuestra promoción 3 X 2 en las frituras participantes!",1),
-("¿Sabías que?","La miel de nuestra tienda es 100% natural de abeja fina real y de la más alta calidad en el mercado", 1),
-("Aceite saludable","La aceite más saludable para su hogar",1);
+("¿Sabías que?","La miel de nuestra tienda es 100% natural de abeja fina real y de la más alta calidad en el mercado, ahora 10% de descuento", 1),
+("Aceite saludable","La aceite más saludable para su hogar, compre 30 y llevese 25!",1);
 
 

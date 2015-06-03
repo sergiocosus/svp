@@ -71,8 +71,8 @@ DROP TABLE IF EXISTS `svp`.`ads` ;
 
 CREATE TABLE IF NOT EXISTS `svp`.`ads` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `title` VARCHAR(45) NULL,
-  `description` VARCHAR(45) NULL,
+  `title` text NULL,
+  `description` text NULL,
   `product_id` INT UNSIGNED NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_ads_product_idx` (`product_id` ASC),
