@@ -20,10 +20,10 @@ class DepartamentosController extends \Phalcon\Mvc\Controller
         if(isset($_GET['departament_id'])){
             $departament=  Departament::findFirst($_GET['departament_id']);
         }
-        
-        var_dump($departament->products->toArray());
-        
+        $size=count($departament->products);
+        $exist=$size!=0;
         $this->view->setVar('departament', $departament);
+        $this->view->setVar('size',$size);
     }
 
 }

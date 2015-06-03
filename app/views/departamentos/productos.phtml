@@ -6,12 +6,19 @@
 
 <h1>Departamento de "{{departament.name}}"</h1>
 <div class="noImprimir" id="listaProductos">
+{% if size != 0 %}
+   
     {% for product in departament.products %}
         <a href="verificador?code={{ product.bar_code | e }}">
             <img src="img/products/{{ product.id}}">
             <span>{{ product.name }}</span>
         </a>
     {% endfor %}
+
+{% else %}
+<a style="color:white; width:400px; font-size:30px;">No hay productos registrados en este departamento</a>
+
+{% endif %}
 </div>
 
 {% endblock %}
