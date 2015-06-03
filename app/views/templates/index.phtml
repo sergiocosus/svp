@@ -27,9 +27,10 @@
     <span id="mensaje2">PASE SU PRODUCTO</span>
 </footer>
 
-<form id="toVerifier" method="post"  action="verificador">
+<form id="toVerifier" method="get"  action="verificador">
     <input id="barCode" type="hidden" name="code"/>
 </form>
+
 <script>
     var codigo="";
     $(window).on('keypress',function(e){
