@@ -46,5 +46,11 @@ class VerificadorController extends \Phalcon\Mvc\Controller
     public function testAction(){
         
     }
+    
+    public function existAction($barCode) {
+        $this->view->disable();
+        header('Content-Type: application/json');
+        echo json_encode(['exist' => Product::findFirstByBarCode($barCode)?true:false]);
+    }
 }
 
