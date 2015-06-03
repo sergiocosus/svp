@@ -30,6 +30,7 @@ and open the template in the editor.
     margin-top: 25px;
     margin-bottom: 25px;
     display: inline-block;
+    cursor:pointer;
 }
 
 #panel{
@@ -59,7 +60,128 @@ and open the template in the editor.
     bottom: 0px;
     margin: auto;
 }
+#mapaDiv div{
+    display:none;
+}
 
 .botonClick{
     background-color: #292929 !important;
+}
+
+.deptos{
+    background-color: rgba(256,10,10,.6);
+    position:absolute;
+    border-radius:10px;
+}
+#depto1{
+             width: 260px;
+             height: 140px;
+             z-index: 1000;
+             top: 60px;
+             right:10px;
+}
+#depto1{
+             width: 260px;
+             height: 140px;
+             z-index: 1000;
+             top: 60px;
+             right:10px;
+}
+#depto2{
+             width: 260px;
+             height: 140px;
+             z-index: 1000;
+             top: 60px;
+             right:290px;
+}
+
+#depto3{
+             width: 260px;
+             height: 140px;
+             z-index: 1000;
+             top: 60px;
+             right:565px;
+}
+#depto4{
+             width: 260px;
+             height: 190px;
+             z-index: 1000;
+             top: 230px;
+             right:10px;
+}
+#depto5{
+             width: 260px;
+             height: 190px;
+             z-index: 1000;
+             top: 230px;
+             right:290px;
+}
+#depto6{
+             width: 260px;
+             height: 190px;
+             z-index: 1000;
+             top: 230px;
+             right:565px;
+             
+}
+
+
+#depto7{
+             width: 160px;
+             height: 160px;
+             z-index: 1000;
+             top: 50px;
+             left:55px;
+}
+#depto8{
+             width: 160px;
+             height: 190px;
+             z-index: 1000;
+             top: 230px;
+             left:55px;
+}
+
+#depto9{
+             width: 410px;
+             height: 100px;
+             z-index: 1000;
+             bottom:0px;
+             left:10px;
+}
+#depto10{
+             width: 200px;
+             height: 100px;
+             z-index: 1000;
+             bottom:0px;
+             left:415px;
+}
+#depto11{
+             width: 290px;
+             height: 100px;
+             z-index: 1000;
+             bottom:0px;
+             left:610px;
+}
+
+#depto12{
+             width: 450px;
+             height: 30px;
+             z-index: 1000;
+             top:0px;
+             left:0;
+}
+#depto13{
+             width: 537px;
+             height: 30px;
+             z-index: 1000;
+             top:0px;
+             right:15px;
+}
+
+#depto14{
+             width: 30px;
+             height: 450px;
+             z-index: 1000;
+             top:0px;
+             left:0px;
 }
