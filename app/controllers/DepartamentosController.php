@@ -5,7 +5,8 @@ class DepartamentosController extends \Phalcon\Mvc\Controller
 
     public function indexAction()
     {
-        $departament=null;
+        $departament=new Departament();
+        $departament->id=0;
         if(isset($_GET['departament_id'])){
             $departament=  Departament::findFirst($_GET['departament_id']);
         }

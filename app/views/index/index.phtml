@@ -21,15 +21,16 @@
         height: 500px; overflow: hidden;">
        
         {% for ad in ads %}
-        <div><a>
+        <div>
+            <a href="ads/index/{{ad.id}}">
             <img u="image" src="img/ads/{{ad.id}}" />
-            <h2 class="tituloAnuncio" >
-                {{ad.title|e}}
-            </h2>
-            <br/>
-            <div class="textoAnuncio" >
-                {{ad.description}}
-            </div>
+                <h2 class="tituloAnuncio" >
+                    {{ad.title|e}}
+                </h2>
+                <br/>
+                <div class="textoAnuncio" >
+                    {{ad.description}}
+                </div>
             </a>
         </div>
         {% endfor  %}

@@ -1,9 +1,26 @@
-<div class="noImprimir" id="promocioneslol">
-        <div>Productos Similares:</div>
-        
-            <a href="verificador?code={{ ad['bar_code'] | e }}">
-                <img src="img/productos/{{ ad['id']}}">
-                <span>{{ ad['name'] }}</span>
-            </a>
-        
+{% extends "templates/index.phtml" %}
+
+{% block titulo %} Departamentos {% endblock %}
+{% block cuerpo %}
+
+
+<h2>"{{ad.title}}"</h2>
+<div class="noImprimir" id="anunciote">
+    <img src="img/ads/{{ ad.id}}">
+    <div>
+        <span>{{ ad.description }}</span>
+        <br/>
+        <div class="boton1" style="width:300px;">IMPRIMIR CUPÓN</div>
+         
     </div>
+</div>
+
+     
+<script>
+var $botonCupon = $("<div>", 
+    {class:"boton1", text:"IMPRIMIR CUPÓN", style:"width:300px;"});
+</script>            
+
+
+
+{% endblock %}
