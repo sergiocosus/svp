@@ -449,10 +449,9 @@ h1{
     width: 750px;
     background-color: rgba(0,256,0,.4);
     border-radius: 20px;
-    top:0px;
-    bottom:0px;
+    top:65px;
     left:0px;
     right: 0px;
     margin: auto;
-    padding: 50px;
+    padding: 30px;
 }
