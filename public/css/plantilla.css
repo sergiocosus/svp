@@ -380,7 +380,6 @@ a:hover{text-decoration: none;}
     font-size: 30px;
     cursor: pointer;
     box-shadow: 1px 1px 10px black;
-    position: fixed;
     text-align: center;
     margin: 10px;
 }
@@ -406,6 +405,7 @@ a:hover{text-decoration: none;}
 #listaProductos{
     width:100%;
     text-align: center;
+    margin:50px;
 }
 
 #listaProductos a{
@@ -437,13 +437,16 @@ a:hover{text-decoration: none;}
     padding:5px;
 }
 
-h1{
+h1,h2{
     background-color: rgba(150,0,150,.5);
     font-size: 40px;
     color:white;
     font-family: fantasy;
     padding: 5px;
     text-align: center;
+}
+h2{
+    background-color: rgba(0,150,150,.5);
 }
 #datos{
     font-family: fantasy;
@@ -459,3 +462,25 @@ h1{
     margin: auto;
     padding: 30px;
 }
+
+#anunciote{
+    background-color: rgba(100,100,100,.5);
+}
+
+#anunciote img{
+    display:inline-block;
+    max-width: 50%;
+    margin:30px;
+    border-radius: 30px;
+}
+#anunciote > div{
+    margin:30px;
+    width:30%;
+    display:inline-block;
+    color:white;
+    font-family: fantasy;
+    vertical-align: top;
+    text-align: center;
+    font-size: 30px;
+}
+

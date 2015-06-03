@@ -13,7 +13,7 @@
          border-radius: 30px;
          background-color: rgba(0,50,0,.2);
          padding: 10px;">
-        <div style="position:relative; width:300px; height: 300px;" class="inlineBlock">
+        <div style="position:relative; width:300px; height:420px;;" class="inlineBlock">
             <img src="img/products/{{producto.id}}" style="border-radius: 10px;position:absolute;top:0px; left:0px; bottom:0px; right:0px; margin:auto;max-width:300px; max-height:300px;">
         </div>
         <script >
@@ -99,7 +99,7 @@
 
     <script>
         var verficador = new Verficador();
-        var $botonCupon = $("<div>", {class:"boton1", text:"IMPRIMIR CUPÓN", style:"position:absolute; bottom: -40px; left:0px; right:0px; margin:auto;width:300px;"});
+        var $botonCupon = $("<div>", {class:"boton1", text:"IMPRIMIR CUPÓN", style:"width:300px;"});
         var coupon = {{coupon | json_encode}};
         var $descripcionV=$('#descripcionV');
         var $descripcionMostrar=$('#descripcionMostrar');
@@ -120,7 +120,7 @@
             }
         }, 1000);
         if (coupon){
-            $caracteristicas.append($botonCupon);
+            $caracteristicas.find('ul') .append($botonCupon);
         }
         
         $promocioneslol.children('div').on('click',function(){

@@ -3,13 +3,13 @@
 class AdsController extends \Phalcon\Mvc\Controller
 {
 
-    public function indexAction()
+    public function indexAction($id=null)
     {
         $ad=null;
-        if(isset($_GET['ad_id'])){
-            $ad=  Ad::findFirst($_GET['ad_id']);
+        if($id!=null){
+            $ad=Ad::findFirst($id);
         }
-        $this->view->setVar('departament', $ad);
+        $this->view->setVar('ad', $ad);
     }
 
 }
