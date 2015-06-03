@@ -208,7 +208,7 @@ footer span{
     left: 0px;
     right:0px;
     margin: auto;
-    height: 80px;
+    height: 100px;
     background-color: rgba(155,155,0,.5);
     border-radius: 10px;
     font-size: 20px;
@@ -216,6 +216,7 @@ footer span{
     overflow: hidden;
     color:white;
 }
+
 #promocioneslol a{
     margin-top:5px;
     margin-left:10px;
@@ -229,7 +230,6 @@ footer span{
     border-radius: 5px;
 }
 #promocioneslol a img{
-    max-width: 55px;
     max-height: 55px;
 }
 #promocioneslol a span{
@@ -238,7 +238,7 @@ footer span{
     margin:0px;
     margin-left: 5px;
     margin-right: 5px;
-    width:100px;
+    max-width:150px;
 }
 
 #promocioneslol > span{
@@ -247,6 +247,10 @@ footer span{
     vertical-align: top;
     margin:10px;
     
+}
+
+#promocioneslol > div {
+    background-color: rgba(0,0,0,.3); 
 }
 
 nav{
