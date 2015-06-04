@@ -203,11 +203,17 @@ No hay nada mejor que comprar todas las herramientas básicas que se usan con re
 (12,'12','Llanta Firestone Firehawk 900 215/60 R15 - Negro',1369,7,null,
 'El neumático ideal para los amantes de la velocidad. 
 
-Alto desempeño en pavimento seco y mojado gracias al compuesto y diseño innovador de su banda de rodamiento, la cual incorpora mayor rigidez de los bloques incrementado el performance de frenado en pavimento seco y mojado con alta resistencia al desgaste central. Diseño de hombros tipo “Bridge Shoulder” en los bloques lo cual proporciona excelente resistencia al desgate tipo “Punta–Talón”. Tacos gruesos y densos. Diseño redondeado. Estructura más sólida. El Firestone Multihawk de Firestone resulta imponente al mirarlo. Las dos nervaduras centrales, continuas y sólidas, ofrecen una máxima tracción y protección contra cualquier desgaste. La amplitud de los hombros, con ranuras profundas y microsurcos laterales delgados, facilita la dispersión del agua asegurando el buen contacto del neumático con la carretera.');
-/*
-(2,'2','CAMARA DE VIGILANCIA VONNIC',508.23,7,null,
+Alto desempeño en pavimento seco y mojado gracias al compuesto y diseño innovador de su banda de rodamiento, la cual incorpora mayor rigidez de los bloques incrementado el performance de frenado en pavimento seco y mojado con alta resistencia al desgaste central. Diseño de hombros tipo “Bridge Shoulder” en los bloques lo cual proporciona excelente resistencia al desgate tipo “Punta–Talón”. Tacos gruesos y densos. Diseño redondeado. Estructura más sólida. El Firestone Multihawk de Firestone resulta imponente al mirarlo. Las dos nervaduras centrales, continuas y sólidas, ofrecen una máxima tracción y protección contra cualquier desgaste. La amplitud de los hombros, con ranuras profundas y microsurcos laterales delgados, facilita la dispersión del agua asegurando el buen contacto del neumático con la carretera.'),
+
+(13,'13','SILDENAFIL 50MG 10 TAB',299.00,4,null,
+'El sildenafil está indicado para el tratamiento de la disfunción eréctil, que consiste en la incapacidad para lograr o mantener la erección del pene suficiente para tener rendimiento sexual satisfactorio. 
+Para que sildenafil sea efectivo es necesario que haya estimulación sexual.'),
+(14,'14','TESTOPRIM-D - TESTOSTERONA',250.00,4,null,
+'Cada ampolla contiene 50 mg de testosterona propionate y 200 mg de testosterona enantate, disuelta en 1 ml de aceite.
+El uso de testosterona ayuda a ganar mas masa muscular y fuerza, es el mejor esteroide anabólico.'),
+(15,'15','ORLISTAT - ELIMINADOR DE GRASA',149.00,4,null,
 '');
-*/
+
 
 insert into ads (title,description,product_id) values
 ("Gran descuento en Cereales y Leche!", "En nuestra tienda tenemos de rebaja todos los cereales y la leche", 1),
